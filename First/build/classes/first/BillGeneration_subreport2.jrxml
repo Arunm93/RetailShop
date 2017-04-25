@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BillGeneration_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c672773f-37a0-47e3-be98-1eee85417b33">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from firstdb.billdetails]]>
+	</queryString>
+	<field name="sno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prodDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rate" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vat" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="addTax" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="billNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="45" height="20" uuid="1d94305e-06ad-4cef-81e9-c0e4628f2850"/>
+				<text><![CDATA[sno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="0" width="141" height="20" uuid="5a908662-d9bf-4b76-ae45-c92808767e3c"/>
+				<text><![CDATA[prodDesc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="0" width="36" height="20" uuid="5d588530-1891-4f33-8cbb-68717a821b12"/>
+				<text><![CDATA[qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="69" height="20" uuid="7995378a-4270-434e-983c-22aa1dbce66b"/>
+				<text><![CDATA[rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="69" height="20" uuid="ab21ab1b-957d-4144-a0a9-d2b2168bd91c"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="69" height="20" uuid="df8da9be-f326-43ba-bb82-e9c77bcf2cdb"/>
+				<text><![CDATA[vat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="69" height="20" uuid="6961476a-8eb4-4b65-9fb8-1630a4af538f"/>
+				<text><![CDATA[addTax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="0" width="54" height="20" uuid="4f3cc318-e634-4ea5-8617-ffcd2edb4ae5"/>
+				<text><![CDATA[unit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="45" height="20" uuid="d0973692-29ad-4ed2-b40c-7803cf35d075"/>
+				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="0" width="141" height="20" uuid="e03363c6-430a-41ec-95a0-db877120fa27"/>
+				<textFieldExpression><![CDATA[$F{prodDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="36" height="20" uuid="72a2fb6d-a25b-4d75-887e-8c387cb40ca4"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="69" height="20" uuid="a4e18593-09b1-4786-a2e5-5b74669f2145"/>
+				<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="69" height="20" uuid="fb8ce210-3d2b-417e-898d-674b50a0d44b"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="69" height="20" uuid="85112473-39ef-47ee-91b6-c6b5b5701d11"/>
+				<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="69" height="20" uuid="7f05f1ef-6c12-4911-ab86-976cc34bf701"/>
+				<textFieldExpression><![CDATA[$F{addTax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="0" width="54" height="20" uuid="12793788-4f70-4019-b6cf-2d8fe8d7f62f"/>
+				<textFieldExpression><![CDATA[$F{unit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
