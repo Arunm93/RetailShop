@@ -7,22 +7,15 @@ CREATE  TABLE `firstdb`.`companydetails` (
   `address` VARCHAR(345) NOT NULL ,
   `phone` VARCHAR(45) NOT NULL ,
   `logo` BLOB NOT NULL ,
-  `email` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`companyname`) );
+  `email` VARCHAR(45) NOT NULL  );
   
   
   CREATE  TABLE `firstdb`.`productdetails` (
   `productno` VARCHAR(45) NOT NULL ,
   `productname` VARCHAR(450) NOT NULL ,
-  `productdesc` VARCHAR(45) NOT NULL ,
+  `productdesc` VARCHAR(450) NOT NULL ,
   `rate` DOUBLE NOT NULL DEFAULT 0 ,
-  `companyname` VARCHAR(45) NULL ,
-  PRIMARY KEY (`productno`) ,
-  CONSTRAINT `companyname`
-    FOREIGN KEY ()
-    REFERENCES `firstdb`.`companydetails` ()
-    ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+  `companyname` VARCHAR(45) NULL);
 
 	
 	CREATE  TABLE `firstdb`.`clientdetails` (
@@ -35,7 +28,7 @@ CREATE  TABLE `firstdb`.`companydetails` (
   `tin` VARCHAR(45) NOT NULL ,
   `companyname` VARCHAR(45) NOT NULL ,
   `outstandingamount` DOUBLE NOT NULL DEFAULT 0 ,
-  PRIMARY KEY (`clientname`) );
+  `amountpaid` DOUBLE NOT NULL DEFAULT 0 );
   
   CREATE  TABLE `firstdb`.`unitdetails` (
   `unit` VARCHAR(45) NOT NULL ,
